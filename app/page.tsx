@@ -10,20 +10,11 @@ import {
   Button,
   Stack,
   TextField,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
   Box,
   Avatar,
   Divider,
   CardActions
 } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 
 function PostCard({ title, content }: { title: string; content: string }) {
   const [liked, setLiked] = useState(false);
@@ -96,7 +87,7 @@ function SuggestionCard({ name, onRemove }: { name: string; onRemove: () => void
     else if (status === 'pending') setStatus('connected');
     else {
       setStatus('connect');
-      onRemove(); // optional: remove from list after connected
+      onRemove();
     }
   };
 
@@ -119,7 +110,6 @@ function SuggestionCard({ name, onRemove }: { name: string; onRemove: () => void
   );
 }
 
-// Right sidebar containing multiple suggestions
 function SuggestionsColumn() {
   const [suggestions, setSuggestions] = useState(['Alice', 'Bob', 'Charlie']);
 
@@ -233,7 +223,7 @@ export default function HomePage() {
 
   const addNewPost = () => {
     const newPost = { title: 'New Post', content: newPostContent };
-    setPosts([newPost, ...posts]); // newest posts at top
+    setPosts([newPost, ...posts]);
     setNewPostContent('');
   };
 
