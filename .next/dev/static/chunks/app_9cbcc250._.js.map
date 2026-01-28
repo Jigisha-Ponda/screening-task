@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/dharmik/Desktop/Projects/screening-task-1/app/emotion-cache.ts"],"sourcesContent":["'use client';\n\nimport createCache from '@emotion/cache';\n\nexport default function createEmotionCache() {\n  return createCache({ key: 'mui', prepend: true });\n}\n"],"names":[],"mappings":";;;;AAEA;AAFA;;AAIe,SAAS;IACtB,OAAO,IAAA,6MAAW,EAAC;QAAE,KAAK;QAAO,SAAS;IAAK;AACjD"}},
+    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":["file:///Users/dharmik/Desktop/Projects/screening-task-1/app/theme-registry.tsx"],"sourcesContent":["'use client';\n\nimport { CacheProvider } from '@emotion/react';\nimport { CssBaseline } from '@mui/material';\nimport createEmotionCache from './emotion-cache';\n\nconst clientSideEmotionCache = createEmotionCache();\n\nexport default function ThemeRegistry({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <CacheProvider value={clientSideEmotionCache}>\n      <CssBaseline />\n      {children}\n    </CacheProvider>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AACA;AACA;AAJA;;;;;AAMA,MAAM,yBAAyB,IAAA,qIAAkB;AAElC,SAAS,cAAc,EACpC,QAAQ,EAGT;IACC,qBACE,6LAAC,uQAAa;QAAC,OAAO;;0BACpB,6LAAC,2NAAW;;;;;YACX;;;;;;;AAGP;KAXwB"}}]
+}
