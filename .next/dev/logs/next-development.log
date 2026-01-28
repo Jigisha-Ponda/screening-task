@@ -5,3 +5,97 @@
 [00:00:38.847] Server  LOG     ✓ Compiled in 12ms
 [00:00:48.693] Server  LOG     ✓ Compiled in 11ms
 [00:01:28.518] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:37.841] Server  LOG     ✓ Compiled in 80ms
+[00:05:39.601] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:39.758] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="page.tsx">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
+                        <HomePage params={Promise} searchParams={Promise}>
+                          <Container maxWidth="lg" sx={{mt:2}}>
+                            <MuiContainer-root as="div" ownerState={{maxWidth:"lg", ...}} className="MuiContain..." ...>
+                              <Insertion>
++                             <div className="MuiContainer-root MuiContainer-maxWidthLg mui-11kmze1-MuiContainer-root">
+-                             <style data-emotion="mui-global o6gwfi" data-s="">
+                    ...
+                  ...
+      ...
+
+[00:05:41.891] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:51.026] Server  LOG     ✓ Compiled in 9ms
+[00:06:21.412] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/client/components/builtin/global-not-found'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
+[00:06:21.442] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
+[00:06:21.471] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
+[00:06:21.505] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
+[00:06:21.651] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/client/components/builtin/global-not-found'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
+[00:06:21.698] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
+[00:06:21.720] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
+[00:06:21.750] Server  ERROR   Error: Cannot find module 'next/dist/pages/_error'
+Require stack:
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/router-server.js
+- /Users/dharmik/Desktop/Projects/screening-task-1/node_modules/next/dist/server/lib/start-server.js
